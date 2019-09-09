@@ -27,13 +27,13 @@ $   /tmp/func.log
 ```
 
 ## a3rt
-[ここ](/a3rt-tutorial/README.md) を参照
+[ここ](/2nd-week/a3rt-tutorial/README.md) を参照
 
 ## sdkの実行
-[ここ](/aws-sdk/README.md)を参照
+[ここ](/2nd-week/aws-sdk/README.md)を参照
 
 ## s3との連携
-[ここ](/s3-lambda/README.md)を参照
+[ここ](/2nd-week/s3-lambda/README.md)を参照
 
 ## api-gateway
-[ここ](/api-gateway/README.md) を参照
+[ここ](/2nd-week/api-gateway/README.md) を参照
