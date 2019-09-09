@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    a3rt_client (0.1.6)
+      faraday (>= 0.10)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
+    multipart-post (2.1.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  a3rt_client
+
+BUNDLED WITH
+   1.17.3
