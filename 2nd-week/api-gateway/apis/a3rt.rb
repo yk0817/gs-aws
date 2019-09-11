@@ -9,20 +9,11 @@ class A3rt::Api # A3rt::Clientだとgemとバッティングするため、Api�
     def request(text:)
       case text
       when /【Talk】[\s　]*(.+)/
-        A3rt::Client.talk_api(
-          apikey: ENV["A3RT_TALK_API_KEY"], 
-          query: $1
-        )
+        talk(query: $1)
       when /【Suggest】[\s　]*(.+)/
-        A3rt::Client.text_suggest(
-          apikey: ENV["A3RT_TEXT_SUGGEST_API_KEY"], 
-          previous_description: $1
-        )
+        text_suggest(previous_description: $1)
       when /【Summerize】[\s　]*(.+)/
-        A3rt::Client.text_summarization(
-          apikey: ENV["A3RT_TEXT_SUMMARIZATION_API_KEY"], 
-          sentences: $1
-        )
+        text_summarization(sentences: $1)
       else
         p "---------------"
         p "REQUEST:ERROR"
@@ -31,5 +22,28 @@ class A3rt::Api # A3rt::Clientだとgemとバッティングするため、Api�
         raise InvalidText
       end
     end
+      
+      private
+
+        def talk(query:)
+          A3rt::Client.talk_api(
+            apikey: ENV["A3RT_TALK_API_KEY"], 
+            query: query
+          )
+        end
+
+        def text_suggest(previous_description:)
+          A3rt::Client.text_suggest(
+            apikey: ENV["A3RT_TEXT_SUGGEST_API_KEY"], 
+            previous_description: previous_description
+          )
+        end
+
+        def text_summarization(sentences:)
+          A3rt::Client.text_summarization(
+            apikey: ENV["A3RT_TEXT_SUMMARIZATION_API_KEY"], 
+            sentences: sentences
+          )
+        end
   end
 end
