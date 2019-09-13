@@ -3,4 +3,4 @@ vendor/
 *.zip
 .bundle/
 *.tfstate*
-.terraform/*
+.terraform/
