@@ -2,17 +2,18 @@
 
 ## 個人製作発表
 
-## terraform
+## terraformインストール
 
 ```
-# version管理インストール
+# terraform version管理インストール
 $ brew install tfenv
 # terraformのインストール
 $ brew install terraform
 # terraform versionリスト
-$ tfenv list-remote
 $ tfenv install 0.11.14
-$ tfenv list #0.11.14なら成功
+$ tfenv use 0.11.14
+# 以下のコマンドを実行し、0.11.14に*がついてたら成功
+$ tfenv list
 ```
 
 ## サーバーレスデプロイについて
